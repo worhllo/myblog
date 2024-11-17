@@ -26,5 +26,6 @@
     "showPostSource":0,
     "rssSplit":"sentence",
     "bottomText":"转载请注明出处",
+    "script":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script>",
     "needComment":1
 }
