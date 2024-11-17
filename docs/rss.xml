@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Watch Your Back's Blog</title><link>https://home.worhllo.us.kg</link><description>Welcome</description><copyright>Watch Your Back's Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://home.worhllo.us.kg</link></image><lastBuildDate>Sun, 17 Nov 2024 07:00:56 +0000</lastBuildDate><managingEditor>Watch Your Back's Blog</managingEditor><ttl>60</ttl><webMaster>Watch Your Back's Blog</webMaster><item><title>markdown格式语法</title><link>https://home.worhllo.us.kg/post/markdown-ge-shi-yu-fa.html</link><description>## Static Badge&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Watch Your Back's Blog</title><link>https://home.worhllo.us.kg</link><description>Welcome</description><copyright>Watch Your Back's Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://home.worhllo.us.kg</link></image><lastBuildDate>Sun, 17 Nov 2024 07:08:36 +0000</lastBuildDate><managingEditor>Watch Your Back's Blog</managingEditor><ttl>60</ttl><webMaster>Watch Your Back's Blog</webMaster><item><title>markdown格式语法</title><link>https://home.worhllo.us.kg/post/8.html</link><description>## Static Badge&#13;
 ```markdown&#13;
 ![](https://img.shields.io/badge/参考页面-orange)&#13;
 ```&#13;
@@ -102,7 +102,7 @@ print('Hello World')&#13;
 &#13;
 ## 引用&#13;
 ```markdown&#13;
-&gt; 落霞与孤鹜齐飞，秋水共长天一色。</description><guid isPermaLink="true">https://home.worhllo.us.kg/post/markdown-ge-shi-yu-fa.html</guid><pubDate>Sun, 17 Nov 2024 06:38:21 +0000</pubDate></item><item><title>免费搭建无限空间＆支持身份认证的私人图床</title><link>https://home.worhllo.us.kg/post/mian-fei-da-jian-wu-xian-kong-jian-%EF%BC%86-zhi-chi-shen-fen-ren-zheng-de-si-ren-tu-chuang.html</link><description># 初步介绍&#13;
+&gt; 落霞与孤鹜齐飞，秋水共长天一色。</description><guid isPermaLink="true">https://home.worhllo.us.kg/post/8.html</guid><pubDate>Sun, 17 Nov 2024 06:38:21 +0000</pubDate></item><item><title>免费搭建无限空间＆支持身份认证的私人图床</title><link>https://home.worhllo.us.kg/post/7.html</link><description># 初步介绍&#13;
 &gt; 本项目是 [Telegraph-Image](https://github.com/cf-pages/Telegraph-Image) 的重制版，&#13;
 &gt;&#13;
 &gt;  - 项目图片存储在 telegraph 的服务器上，支持图片审查 API，可自动屏蔽不良图片；&#13;
@@ -137,6 +137,6 @@ print('Hello World')&#13;
 &#13;
 ### ２．获取 TG_CHAT_ID（频道 ID）&#13;
 &#13;
-在 telegram 中 打开左侧的二级菜单，打开`新建频道`（**Manage Channel**），频道名字任意，后面内容可以直接跳过。</description><guid isPermaLink="true">https://home.worhllo.us.kg/post/mian-fei-da-jian-wu-xian-kong-jian-%EF%BC%86-zhi-chi-shen-fen-ren-zheng-de-si-ren-tu-chuang.html</guid><pubDate>Sun, 17 Nov 2024 06:23:37 +0000</pubDate></item><item><title>【Gmeek进阶】强调关键信息使用</title><link>https://home.worhllo.us.kg/post/%E3%80%90Gmeek-jin-jie-%E3%80%91-qiang-diao-guan-jian-xin-xi-shi-yong.html</link><description>&gt; Github的语法里面有5中警报强调信息，分别是`NOTE` `TIP` `IMPORTANT` `WARNING` `CAUTION` 。</description><guid isPermaLink="true">https://home.worhllo.us.kg/post/%E3%80%90Gmeek-jin-jie-%E3%80%91-qiang-diao-guan-jian-xin-xi-shi-yong.html</guid><pubDate>Sun, 17 Nov 2024 06:14:25 +0000</pubDate></item><item><title>Win+R自动化运用</title><link>https://home.worhllo.us.kg/post/Win%2BR-zi-dong-hua-yun-yong.html</link><description>#  什么是Win+R，有何优点&#13;
+在 telegram 中 打开左侧的二级菜单，打开`新建频道`（**Manage Channel**），频道名字任意，后面内容可以直接跳过。</description><guid isPermaLink="true">https://home.worhllo.us.kg/post/7.html</guid><pubDate>Sun, 17 Nov 2024 06:23:37 +0000</pubDate></item><item><title>【Gmeek进阶】强调关键信息使用</title><link>https://home.worhllo.us.kg/post/6.html</link><description>&gt; Github的语法里面有5中警报强调信息，分别是`NOTE` `TIP` `IMPORTANT` `WARNING` `CAUTION` 。</description><guid isPermaLink="true">https://home.worhllo.us.kg/post/6.html</guid><pubDate>Sun, 17 Nov 2024 06:14:25 +0000</pubDate></item><item><title>Win+R自动化运用</title><link>https://home.worhllo.us.kg/post/5.html</link><description>#  什么是Win+R，有何优点&#13;
 &#13;
-&gt; - 防止有些小白看不懂，所以说明一些，使用Windows+R快捷键就可以打开如下图的运行窗口，在里面输入命令可以方便快捷地打开很多东西，而且本文的所有操作都是在这个运行框里输入的，不要与cmd弄混了。</description><guid isPermaLink="true">https://home.worhllo.us.kg/post/Win%2BR-zi-dong-hua-yun-yong.html</guid><pubDate>Sun, 17 Nov 2024 06:01:02 +0000</pubDate></item></channel></rss>
+&gt; - 防止有些小白看不懂，所以说明一些，使用Windows+R快捷键就可以打开如下图的运行窗口，在里面输入命令可以方便快捷地打开很多东西，而且本文的所有操作都是在这个运行框里输入的，不要与cmd弄混了。</description><guid isPermaLink="true">https://home.worhllo.us.kg/post/5.html</guid><pubDate>Sun, 17 Nov 2024 06:01:02 +0000</pubDate></item></channel></rss>
