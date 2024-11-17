@@ -7,8 +7,6 @@
     "homeUrl":"https://home.worhllo.us.kg",
     "startSite":"11/11/2024",
     "onePageListNum":15,
-    "iconList":{"music":"M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13Z"},
-    "exlink":{"music":"https://music.alang.run/#/"},
     "commentLabelColor":"#006b75",
     "i18n":"CN",
     "singlePage":["link","about"],
