@@ -13,7 +13,7 @@
     "i18n":"CN",
     "singlePage":["link","about"],
     "yearColorList":["#bc4c00", "#0969da", "#1f883d", "#A333D0"],
-    "themeMode":"fix",
+    "themeMode":"manual",
     "dayTheme":"light_tritanopia",
     "nightTheme":"github-light",
     "urlMode":"issue",
