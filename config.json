@@ -1,6 +1,5 @@
 {
     "title":"Watch Your Back's Blog",
-    "subTitle":"<script>document.getElementById('content').innerHTML = `<br>雁过留痕, 人生一世, 还是应该记录点什么<br><br>一个又菜又爱玩, 喜欢瞎折腾的程序员👨🏻‍💻<br><br>`;</script>",
     "avatarUrl":"https://github.githubassets.com/favicons/favicon.svg",
     "GMEEK_VERSION":"last",
     "displayTitle":"CJW",
@@ -21,7 +20,6 @@
     "needComment":1,
     "bottomText":"❤️ 转载文章请注明出处，谢谢！❤️",
     "script":"<script src='https://home.worhllo.us.kg/plugins/ArticleTOC.js'></script><script src='https://home.worhllo.us.kg/plugins/lightbox.js'></script><script>document.querySelectorAll('a').forEach(anchor => {const img = anchor.querySelector('img');if (img && img.hasAttribute('data-canonical-src')) {const canonicalSrc = img.getAttribute('data-canonical-src');anchor.setAttribute('href', canonicalSrc);img.setAttribute('src', canonicalSrc);img.removeAttribute('data-canonical-src');}});</script>",
-    "allHead":"<script src='https://home.worhllo.us.kg/plugins/RonanTheme.js'></script>",
-    "allHead":"<script src='https://home.worhllo.us.kg/plugins/backtop.js'></script>"
+    "script":"<script src='https://home.worhllo.us.kg/plugins/RonanTheme.js'></script><script src='https://home.worhllo.us.kg/plugins/backtop.js'></script>"
 }
   
