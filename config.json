@@ -1,5 +1,6 @@
 {
     "title":"Watch Your Back's Blog",
+    "subTitle":"<script>document.getElementById('content').innerHTML = `<br>雁过留痕, 人生一世, 还是应该记录点什么<br><br>一个又菜又爱玩, 喜欢瞎折腾的程序员<br><br>`;</script>",
     "avatarUrl":"https://github.githubassets.com/favicons/favicon.svg",
     "GMEEK_VERSION":"last",
     "displayTitle":"Watch Your Back",
