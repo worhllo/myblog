@@ -15,7 +15,7 @@
     "yearColorList":["#bc4c00", "#0969da", "#1f883d", "#A333D0"],
     "themeMode":"manual",
     "dayTheme":"light_tritanopia",
-    "nightTheme":"github-light",
+    "nightTheme":"dark_tritanopia",
     "urlMode":"issue",
     "showPostSource":0,
     "needComment":1,
