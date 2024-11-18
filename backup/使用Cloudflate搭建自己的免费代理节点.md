@@ -1,12 +1,12 @@
 ## 一、前言
 
-> 1. **代理（Proxy） **是一种充当客户端和目标服务器之间中介的服务器或服务。当你发送网络请求时，代理服务器会代表你向目标服务器请求数据，并将响应转发给你的设备。代理服务器充当了一个**中转站，处理你的请求并将数据传递给你，同时隐藏了你的真实IP地址。
+> 1. **代理（Proxy**） 是一种充当客户端和目标服务器之间中介的服务器或服务。当你发送网络请求时，代理服务器会代表你向目标服务器请求数据，并将响应转发给你的设备。代理服务器充当了一个**中转站，处理你的请求并将数据传递给你，同时隐藏了你的真实IP地址。
 > 
-> 2. **VPN（Virtual Private Network）**是一种通过在公共网络上创建加密隧道来保护用户隐私和安全的技术。它通过在你的设备和VPN服务器之间建立安全的连接，将你的网络流量加密并传输到目标服务器，从而在互联网上创建了一个虚拟的私有网络。使用VPN时，你的所有网络流量都经过加密处理，以防止第三方截获或监视你的数据。VPN技术可以有效保护你的隐私和安全。
+> 2. **VPN（Virtual Private Network**）是一种通过在公共网络上创建加密隧道来保护用户隐私和安全的技术。它通过在你的设备和VPN服务器之间建立安全的连接，将你的网络流量加密并传输到目标服务器，从而在互联网上创建了一个虚拟的私有网络。使用VPN时，你的所有网络流量都经过加密处理，以防止第三方截获或监视你的数据。VPN技术可以有效保护你的隐私和安全。
 > 
-> 3. 代理服务器的主要功能是充当客户端和目标服务器之间的中介。它可以隐藏你的真实IP地址，帮助你绕过地理限制，实施访问控制和过滤，并提供缓存和加速功能。代理服务器通常在局部范围内使用，比如在公司内部网络中，用于管理和控制内部网络访问。
+> 3. **代理服务器**的主要功能是充当客户端和目标服务器之间的中介。它可以隐藏你的真实IP地址，帮助你绕过地理限制，实施访问控制和过滤，并提供缓存和加速功能。代理服务器通常在局部范围内使用，比如在公司内部网络中，用于管理和控制内部网络访问。
 > 
-> 4. 而VPN是一种通过在公共网络上创建加密隧道来保护隐私和安全的技术。它的主要功能是加密你的数据流量、隐藏你的真实IP地址、绕过地理限制和提供安全的网络连接。VPN广泛应用于个人和商业领域，用于保护个人隐私、提供安全的远程访问和连接分布在不同地区的网络。
+> 4. **VPN**是一种通过在公共网络上创建加密隧道来保护隐私和安全的技术。它的主要功能是加密你的数据流量、隐藏你的真实IP地址、绕过地理限制和提供安全的网络连接。VPN广泛应用于个人和商业领域，用于保护个人隐私、提供安全的远程访问和连接分布在不同地区的网络。
 > 
 > 5. 虽然代理服务器和VPN在某些方面有相似的功能，但VPN提供了更全面的隐私和安全保护，因为它加密了整个网络连接而不仅仅是浏览器或特定应用程序的流量。此外，VPN还可以在不同的网络中建立安全连接，使你能够访问远程资源和保护敏感数据。
 > 
@@ -18,23 +18,15 @@
 
 #### 1.注册cloudflare账户
 
-打开[cloudflare](https://www.cloudflare.com/) 中文官网，点击注册。完成人机验证后点击注册。操作无误的话会直接进入cloudflare后台,会提示你先输入一个域名，没有域名的话可以暂时忽略。同样可以在右上角切换语言。![alt text](https://blog.eimoon.com/p/%E4%BD%BF%E7%94%A8cloudflate%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%85%8D%E8%B4%B9%E4%BB%A3%E7%90%86%E8%8A%82%E7%82%B9/images/01.webp)
-
-此时你的邮箱会受到一封验证邮件，点击邮件的链接地址进行验证，验证完成后重新登录到后台。 ![alt text](https://blog.eimoon.com/p/%E4%BD%BF%E7%94%A8cloudflate%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%85%8D%E8%B4%B9%E4%BB%A3%E7%90%86%E8%8A%82%E7%82%B9/images/09.webp)
+打开[cloudflare](https://www.cloudflare.com/) 中文官网，点击注册。完成人机验证后点击注册。操作无误的话会直接进入cloudflare后台,会提示你先输入一个域名，没有域名的话可以暂时忽略。同样可以在右上角切换语言。![1.jpg](https://imgbed.worhllo.us.kg/file/1731911084204_1.jpg)此时你的邮箱会受到一封验证邮件，点击邮件的链接地址进行验证，验证完成后重新登录到后台。 ![2.jpg](https://imgbed.worhllo.us.kg/file/1731911151014_2.jpg)
 
 #### 2.创建pages项目的前提准备
 
 - ##### 构建应用程序
 
-如果是新注册账户，在后台中有个开发引导，点击`在我们的开发平台构建开始构建`，如果不是新账户则直接点击左侧的`works和pages导航栏`。  ![alt text](https://blog.eimoon.com/p/%E4%BD%BF%E7%94%A8cloudflate%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%85%8D%E8%B4%B9%E4%BB%A3%E7%90%86%E8%8A%82%E7%82%B9/images/05.webp)
+如果是新注册账户，在后台中有个开发引导，点击`在我们的开发平台构建开始构建`，如果不是新账户则直接点击左侧的`works和pages导航栏`。  ![3.jpg](https://imgbed.worhllo.us.kg/file/1731911208129_3.jpg)接着选择`构建应用程序workers和pages(Creat)`![4.jpg](https://imgbed.worhllo.us.kg/file/1731911278879_4.jpg)跳转页面后点击`切换到pages选项卡`。可以看到，有两种途径可以部署pages,一个是使用git仓库（github或者gitlab），另外一个是直接上传文件。使用git仓库最为简单，当我们修改文件时候不需要一次次地重复上传，但是考虑可能有的朋友没有github账户，这里使用上传文件的方式来演示。##### 下载文件
 
-接着选择`构建应用程序workers和pages(Creat)`![alt text](https://blog.eimoon.com/p/%E4%BD%BF%E7%94%A8cloudflate%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%85%8D%E8%B4%B9%E4%BB%A3%E7%90%86%E8%8A%82%E7%82%B9/images/06.webp)
-
-跳转页面后点击`切换到pages选项卡`。可以看到，有两种途径可以部署pages,一个是使用git仓库（github或者gitlab），另外一个是直接上传文件。使用git仓库最为简单，当我们修改文件时候不需要一次次地重复上传，但是考虑可能有的朋友没有github账户，这里使用上传文件的方式来演示。![alt text](https://blog.eimoon.com/p/%E4%BD%BF%E7%94%A8cloudflate%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%85%8D%E8%B4%B9%E4%BB%A3%E7%90%86%E8%8A%82%E7%82%B9/images/08.webp)
-
-- ##### 下载文件
-
-在github上面有很多使用cloudflare实现代理的仓库，你可以根据你自己的喜好选择，但是部署方式都是大同小异。这里我使用[edgetunnel](https://github.com/cmliu/edgetunnel)，因为使用文件上传方式进行部署，所以首先[下载文件](https://github.com/cmliu/edgetunnel/archive/refs/heads/main.zip) ，下载的文件名是`edgetunnel-main.zip`。![alt text](https://blog.eimoon.com/p/%E4%BD%BF%E7%94%A8cloudflate%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%85%8D%E8%B4%B9%E4%BB%A3%E7%90%86%E8%8A%82%E7%82%B9/images/28.webp)
+在github上面有很多使用cloudflare实现代理的仓库，你可以根据你自己的喜好选择，但是部署方式都是大同小异。这里我使用[edgetunnel](https://github.com/cmliu/edgetunnel)，因为使用文件上传方式进行部署，所以首先[下载文件](https://github.com/cmliu/edgetunnel/archive/refs/heads/main.zip) ，下载的文件名是`edgetunnel-main.zip`。![5](https://imgbed.worhllo.us.kg/file/1731911367839_5.jpg "5")
 
 #### 3.创建pages项目
 
@@ -42,19 +34,19 @@
 
 添加你的项目名称，名称任意。
 
-![alt text](https://blog.eimoon.com/p/%E4%BD%BF%E7%94%A8cloudflate%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%85%8D%E8%B4%B9%E4%BB%A3%E7%90%86%E8%8A%82%E7%82%B9/images/10.webp)
+![7](https://imgbed.worhllo.us.kg/file/1731912225850_7.jpg).jpg)
 
 - ##### 上传文件
 
 选择刚才下载好的`edgetunnel-main.zip` 压缩包上传
 
-![alt text](https://blog.eimoon.com/p/%E4%BD%BF%E7%94%A8cloudflate%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%85%8D%E8%B4%B9%E4%BB%A3%E7%90%86%E8%8A%82%E7%82%B9/images/11.webp)
+![6](https://imgbed.worhllo.us.kg/file/1731911636053_8.jpg)
 
 - ##### 部署站点
 
 上传完成后选择`部署站点`
 
-![alt text](https://blog.eimoon.com/p/%E4%BD%BF%E7%94%A8cloudflate%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%85%8D%E8%B4%B9%E4%BB%A3%E7%90%86%E8%8A%82%E7%82%B9/images/12.webp)
+![9](https://imgbed.worhllo.us.kg/file/1731911680932_9.jpg)
 
 - ##### 生成UUID
 
@@ -64,19 +56,19 @@
 
 将生成的UUID添加到环境变量，注意一下变量名称UUID是大写。记得点击保存。
 
-![alt text](https://blog.eimoon.com/p/%E4%BD%BF%E7%94%A8cloudflate%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%85%8D%E8%B4%B9%E4%BB%A3%E7%90%86%E8%8A%82%E7%82%B9/images/15.webp)
+![10](https://imgbed.worhllo.us.kg/file/1731911709846_10.jpg)
 
 - ##### 重新部署
 
-然后回到`部署`选项，选择`创建新部署`或者`创建部署`，再次上传刚才下载的`edgetunnel-main.zip`压缩包，然后点击保存并部署。这样就能达到重新触发部署的目的，如果是使用git仓库的话就不需要重复上传文件了。部署成功如下第二张图：![alt text](https://blog.eimoon.com/p/%E4%BD%BF%E7%94%A8cloudflate%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%85%8D%E8%B4%B9%E4%BB%A3%E7%90%86%E8%8A%82%E7%82%B9/images/16.webp)
+然后回到`部署`选项，选择`创建新部署`或者`创建部署`，再次上传刚才下载的`edgetunnel-main.zip`压缩包，然后点击保存并部署。这样就能达到重新触发部署的目的，如果是使用git仓库的话就不需要重复上传文件了。部署成功如下第二张图：![11](https://imgbed.worhllo.us.kg/file/1731911741815_11.jpg)
 
-![alt text](https://blog.eimoon.com/p/%E4%BD%BF%E7%94%A8cloudflate%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%85%8D%E8%B4%B9%E4%BB%A3%E7%90%86%E8%8A%82%E7%82%B9/images/17.webp)
+![12](https://imgbed.worhllo.us.kg/file/1731911774454_12.jpg)
 
 # 
 
 ##### 4.更换自定义域名（可换可不换）
 
-进入到你的pages项目的`自定义域`选项，选择`设置自定义域`。设置自定义域名的格式是：{自定义的前缀}.{你的免费域名} 。输入后跳转页面点击`激活`![alt text](https://blog.eimoon.com/p/%E4%BD%BF%E7%94%A8cloudflate%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%85%8D%E8%B4%B9%E4%BB%A3%E7%90%86%E8%8A%82%E7%82%B9/images/20.webp)
+进入到你的pages项目的`自定义域`选项，选择`设置自定义域`。设置自定义域名的格式是：{自定义的前缀}.{你的免费域名} 。输入后跳转页面点击`激活`![13](https://imgbed.worhllo.us.kg/file/1731911798885_13%20(2).jpg)
 
 稍等一会查看自定义域选项,如果状态为绿色则证明激活有效，至此自定义域名已经完成。现在就可以使用自定义域名访问你的page项目了。
 
@@ -84,19 +76,19 @@
 
 - ##### 获取订阅地址
 
-上述必须的步骤完成后，如果你为进行自定义域名，那么回到你的pages项目的`部署`选项,  点击两个链接中的任意一个，就会看到一些json数据。如果你设置了自定义域名，那么使用自定义域名亦可访问。然后在链接地址后面添加`/你的uuid值`，点击回车后，就能看到几串订阅地址，订阅地址选择红框中的任意一个即可。![alt text](https://blog.eimoon.com/p/%E4%BD%BF%E7%94%A8cloudflate%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%85%8D%E8%B4%B9%E4%BB%A3%E7%90%86%E8%8A%82%E7%82%B9/images/18.webp)![alt text](https://blog.eimoon.com/p/%E4%BD%BF%E7%94%A8cloudflate%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%85%8D%E8%B4%B9%E4%BB%A3%E7%90%86%E8%8A%82%E7%82%B9/images/26.webp)
+上述必须的步骤完成后，如果你为进行自定义域名，那么回到你的pages项目的`部署`选项,  点击两个链接中的任意一个，就会看到一些json数据。如果你设置了自定义域名，那么使用自定义域名亦可访问。然后在链接地址后面添加`/你的uuid值`，点击回车后，就能看到几串订阅地址，订阅地址选择红框中的任意一个即可。![14](https://imgbed.worhllo.us.kg/file/1731911828008_14.jpg)![15](https://imgbed.worhllo.us.kg/file/1731911867974_15.jpg)
 
 - ##### 下载v2rayN
 
-点击跳转即可下载，下载完毕后，点击`添加订阅组`，把刚复制的订阅链接添加到地址中，接着在订阅分组中，选择`更新当前订阅分组`，可以使用`不通过代理方式`。![alt text](https://blog.eimoon.com/p/%E4%BD%BF%E7%94%A8cloudflate%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%85%8D%E8%B4%B9%E4%BB%A3%E7%90%86%E8%8A%82%E7%82%B9/images/27.jpeg)
+点击跳转即可下载，下载完毕后，点击`添加订阅组`，把刚复制的订阅链接添加到地址中，接着在订阅分组中，选择`更新当前订阅分组`，可以使用`不通过代理方式`。![16](https://imgbed.worhllo.us.kg/file/1731911977252_16.jpg)
 
 - ##### 测试服务器真连接延迟
 
-全选所有节点，右键点击`测试服务器真连接延迟`。选择一个合适的节点设置为活动服务器后，即可测试google，youtube等网站的连接情况。![alt text](https://blog.eimoon.com/p/%E4%BD%BF%E7%94%A8cloudflate%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%85%8D%E8%B4%B9%E4%BB%A3%E7%90%86%E8%8A%82%E7%82%B9/images/25.jpeg)
+全选所有节点，右键点击`测试服务器真连接延迟`。选择一个合适的节点设置为活动服务器后，即可测试google，youtube等网站的连接情况。![17](https://imgbed.worhllo.us.kg/file/1731912010201_17.jpg)
 
 - ##### 设置单一节点（非必选）
 
-如果你使用的是v2rayN，使用单一节点，直接复制该内容粘贴到你的面板，即为单一节点 ![alt text](https://blog.eimoon.com/p/%E4%BD%BF%E7%94%A8cloudflate%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%85%8D%E8%B4%B9%E4%BB%A3%E7%90%86%E8%8A%82%E7%82%B9/images/27.webp)
+如果你使用的是v2rayN，使用单一节点，直接复制该内容粘贴到你的面板，即为单一节点 ![18](https://imgbed.worhllo.us.kg/file/1731912036322_18.jpg)
 
 ## 本文出处
 
