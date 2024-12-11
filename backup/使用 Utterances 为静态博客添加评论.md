@@ -1,4 +1,3 @@
-# 使用 Utterances 为静态博客添加评论
 ## utterence简介
 [utterances](https://github.com/utterance/utterances)是一款基于 GitHub issues 的开源评论插件，类似于 Gitalk，支持 markdown。
 
