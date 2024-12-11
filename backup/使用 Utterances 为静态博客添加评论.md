@@ -9,7 +9,7 @@ Gitalk 等同样是基于 GitHub issues 的评论插件存在安全性问题。�
 
 尽管获得对 repos 的操作权限还需要授权 Token，但是这个可以通过反代 GitHub API 等手段拿到。由于 GitHub 在权限粒度上并没有进一步细分（也就是说不能只操作 issues），所以一旦拿到 Token，对方就可以删光你的 public repos，因此使用它们的风险是非常高的。
 
-而 反观Utterances 
+而反观Utterances 
 
 1. 通过 GitHub App 实现，可以只对 issues 进行授权，因此没有了安全性风险。
    
@@ -18,14 +18,14 @@ Gitalk 等同样是基于 GitHub issues 的评论插件存在安全性问题。�
 3. utterences是该博客系统的最佳方案，因为Gmeek的核心是All in Github
 
 ## 配置操作
-### １. 安装 Utterances
+### 1.安装 Utterances
 首先保证自己的博客是 public 仓库。
 
 接着打开 [utterances-GitHub App](https://github.com/apps/utterances) 点击 右上角Configure进入安装页面。
 
 然后在打开的页面中选择 Only select repositories，并在下拉框中选择仓库（可以选择博客的仓库，也可以安装到其他仓库），然后点击 Save。
 
-###　２. 进阶配置
+### 2.进阶配置
 完成第一步之后，其实 Utterances 已经在我们的博客上配置好了，这一步是为了生成个性化的 HTML 配置插入博客。喜欢折腾的朋友可以继续。
 
 安装完成后就会自动跳转到配置页面，也可以手动打开 Utterances。
