@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="github-dark" data-light-theme="github-light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    <script src='https://blog.freeblock.cn/plugins/RonanTheme.js'></script>
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
+<meta name="description" content="## 一、主题配置 👀
+### 1.1手动模式（默认）
+这种模式就是当访问者第一次打开博客页面时，呈现的是亮主题。">
+<meta property="og:title" content="Gmeek构建网站（进阶篇）">
+<meta property="og:description" content="## 一、主题配置 👀
+### 1.1手动模式（默认）
+这种模式就是当访问者第一次打开博客页面时，呈现的是亮主题。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://home.worhllo.us.kg/post/14.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title>Gmeek构建网站（进阶篇）</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+.copy-feedback {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    color: var(--color-fg-on-emphasis);
+    background-color: var(--color-fg-muted);
+    border-radius: 3px;
+    padding: 5px 8px;
+    font-size: 12px;
+}
+</style>
+<style>.markdown-alert{padding:0.5rem 1rem;margin-bottom:1rem;border-left:.25em solid var(--borderColor-default,var(--color-border-default));}.markdown-alert .markdown-alert-title {display:flex;font-weight:var(--base-text-weight-medium,500);align-items:center;line-height:1;}.markdown-alert>:first-child {margin-top:0;}.markdown-alert>:last-child {margin-bottom:0;}</style><style>.markdown-alert.markdown-alert-note {border-left-color:var(--borderColor-accent-emphasis, var(--color-accent-emphasis));background-color:var(--color-accent-subtle);}.markdown-alert.markdown-alert-note .markdown-alert-title {color: var(--fgColor-accent,var(--color-accent-fg));}</style><style>.markdown-alert.markdown-alert-tip {border-left-color:var(--borderColor-success-emphasis, var(--color-success-emphasis));background-color:var(--color-success-subtle);}.markdown-alert.markdown-alert-tip .markdown-alert-title {color: var(--fgColor-success,var(--color-success-fg));}</style><style>.markdown-alert.markdown-alert-important {border-left-color:var(--borderColor-done-emphasis, var(--color-done-emphasis));background-color:var(--color-done-subtle);}.markdown-alert.markdown-alert-important .markdown-alert-title {color: var(--fgColor-done,var(--color-done-fg));}</style><style>.markdown-alert.markdown-alert-warning {border-left-color:var(--borderColor-attention-emphasis, var(--color-attention-emphasis));background-color:var(--color-attention-subtle);}.markdown-alert.markdown-alert-warning .markdown-alert-title {color: var(--fgColor-attention,var(--color-attention-fg));}</style><style>.markdown-alert.markdown-alert-caution {border-left-color:var(--borderColor-danger-emphasis, var(--color-danger-emphasis));background-color:var(--color-danger-subtle);}.markdown-alert.markdown-alert-caution .markdown-alert-title {color: var(--fgColor-danger,var(--color-danger-fg));}</style>
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">Gmeek构建网站（进阶篇）</h1>
+<div class="title-right">
+    <a href="https://home.worhllo.us.kg" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题"style="display:none;">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><h2>一、主题配置 👀</h2>
+<h3>1.1手动模式（默认）</h3>
+<p>这种模式就是当访问者第一次打开博客页面时，呈现的是亮主题。<br>
+访问者可以通过页面右上角的按钮随意切换（亮/暗/跟随系统），当切换过后，会自动在浏览器存储目前的选择，之后访问者用同一浏览打开博客任何页面，则自动为上次选择的模式。</p>
+<pre class="notranslate"><code class="notranslate">"themeMode":"manual",
+"dayTheme":"light",
+"nightTheme":"dark",
+</code></pre>
+<h3>1.2 固定模式</h3>
+<pre class="notranslate"><code class="notranslate">"themeMode":"fix",    定义固定
+"dayTheme":"light",   定义固定的主题，`light`则永远为亮主题，`dark`则永远为暗主题，用户无法切换
+"nightTheme":"github-light",    定义`utterances`评论框的永久固定主题。
+</code></pre>
+<h4>1.2.1 固定亮主题</h4>
+<pre class="notranslate"><code class="notranslate">"themeMode":"fix",
+"dayTheme":"light",
+"nightTheme":"github-light",
+</code></pre>
+<h4>1.2.2 固定暗主题</h4>
+<pre class="notranslate"><code class="notranslate">"themeMode":"fix",
+"dayTheme":"dark",
+"nightTheme":"dark-blue",
+</code></pre>
+<h4>1.2.3 utterances评论框的主题选择有：</h4>
+<p>亮主题：github-light boxy-light preferred-color-scheme<br>
+暗主题：github-dark github-dark-orange icy-dark dark-blue photon-dark gruvbox-dark</p>
+<p>##　二、右上角的按钮配置 👀<br>
+在首页上部的右侧有一些按钮，配置方式如下：</p>
+<h3>2.1站内链接</h3>
+<ul>
+<li>关于页面和友情链接</li>
+</ul>
+<ol>
+<li>添加config.json配置</li>
+</ol>
+<pre class="notranslate"><code class="notranslate">   "singlePage":["about"],
+
+</code></pre>
+<ol start="2">
+<li>添加一个Labels标签为about，在你的issue里面写一个文章，然后配置Labels为about即可</li>
+<li>手动全局生成一次。</li>
+</ol>
+<div class="markdown-alert markdown-alert-important"><p class="markdown-alert-title"><svg class="octicon octicon-report mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Important</p><p>about标签只可以添加给唯一一篇issue<br>
+如果有多个singlePage，可以这样定义"singlePage":["link","about"],<br>
+about和link这两个图标的SVG是内置的无需定义iconList，其他则需要自己定义</p>
+</div>
+<ul>
+<li>站外链接<br>
+如果你的about页面是站外的，或者想定义其他的站外链接，例如music。下面以添加music页面按钮为示例。</li>
+</ul>
+<ol>
+<li>添加config.json配置<br>
+此处iconList自定义了图标的SVG，exlink定义了外部链接的地址</li>
+</ol>
+<pre class="notranslate"><code class="notranslate">"iconList":{"music":"M12.7 0.9L7.3 0.9C6 0.9 4.9 2 4.9 3.3L4.9 10.1C4.5 9.9 4.1 9.8 3.6 9.8C2.1 9.8 0.9 11 0.9 12.4C0.9 13.9 2.1 15.1 3.6 15.1C5 15.1 6.2 13.9 6.2 12.4L6.2 3.3C6.2 2.7 6.7 2.2 7.3 2.2L12.7 2.2C13.3 2.2 13.8 2.7 13.8 3.3L13.8 7.5C13.4 7.3 12.9 7.1 12.4 7.1C11 7.1 9.8 8.3 9.8 9.8C9.8 11.2 11 12.4 12.4 12.4C13.9 12.4 15.1 11.2 15.1 9.8L15.1 3.3C15.1 2 14 0.9 12.7 0.9ZM3.6 13.8C2.8 13.8 2.2 13.2 2.2 12.4C2.2 11.7 2.8 11.1 3.6 11.1C4.3 11.1 4.9 11.7 4.9 12.4C4.9 13.2 4.3 13.8 3.6 13.8ZM12.4 11.1C11.7 11.1 11.1 10.5 11.1 9.8C11.1 9 11.7 8.4 12.4 8.4C13.2 8.4 13.8 9 13.8 9.8C13.8 10.5 13.2 11.1 12.4 11.1ZM12.4 11.1"},
+"exlink":{"music":"https://music.meekdai.com"},
+
+</code></pre>
+<ol start="2">
+<li>手动全局生成一次。</li>
+<li>SVG图标格式<br>
+使用iconList自定义SVG图标必须是16px大小的，建议使用github的Octicons 图标</li>
+</ol>
+<p><a href="https://primer.style/foundations/icons/#16px" rel="nofollow">点击跳转Octicons图标链接</a><br>
+<a href="https://gist.github.com/Meekdai/f6375fe2740428af39d90f1afa678fdc">点击跳转大佬自己转换的Octicons图标path列表</a></p>
+<h2>三、提示标签 👀</h2>
+<p>Github的语法里面有5种警报强调信息，分别是NOTE TIP IMPORTANT WARNING CAUTION<br>
+在写文章的时候，适当使用可以提高文章的可读性</p>
+<ul>
+<li>使用方式：</li>
+</ul>
+<pre class="notranslate"><code class="notranslate">&gt; [!NOTE]
+&gt; Useful information that users should know, even when skimming content.
+
+&gt; [!TIP]
+&gt; Helpful advice for doing things better or more easily.
+
+&gt; [!IMPORTANT]
+&gt; Key information users need to know to achieve their goal.
+
+&gt; [!WARNING]
+&gt; Urgent info that needs immediate user attention to avoid problems.
+
+&gt; [!CAUTION]
+&gt; Advises about risks or negative outcomes of certain actions.
+
+</code></pre>
+<ul>
+<li>效果：</li>
+</ul>
+<div class="markdown-alert markdown-alert-note"><p class="markdown-alert-title"><svg class="octicon octicon-info mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</p><p>Useful information that users should know, even when skimming content.</p>
+</div>
+<div class="markdown-alert markdown-alert-tip"><p class="markdown-alert-title"><svg class="octicon octicon-light-bulb mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</p><p>Helpful advice for doing things better or more easily.</p>
+</div>
+<div class="markdown-alert markdown-alert-important"><p class="markdown-alert-title"><svg class="octicon octicon-report mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Important</p><p>Key information users need to know to achieve their goal.</p>
+</div>
+<div class="markdown-alert markdown-alert-warning"><p class="markdown-alert-title"><svg class="octicon octicon-alert mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Warning</p><p>Urgent info that needs immediate user attention to avoid problems.</p>
+</div>
+<div class="markdown-alert markdown-alert-caution"><p class="markdown-alert-title"><svg class="octicon octicon-stop mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M4.47.22A.749.749 0 0 1 5 0h6c.199 0 .389.079.53.22l4.25 4.25c.141.14.22.331.22.53v6a.749.749 0 0 1-.22.53l-4.25 4.25A.749.749 0 0 1 11 16H5a.749.749 0 0 1-.53-.22L.22 11.53A.749.749 0 0 1 0 11V5c0-.199.079-.389.22-.53Zm.84 1.28L1.5 5.31v5.38l3.81 3.81h5.38l3.81-3.81V5.31L10.69 1.5ZM8 4a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 4Zm0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Caution</p><p>Advises about risks or negative outcomes of certain actions.</p>
+</div>
+<h2>四、折叠显示 👀</h2>
+<ul>
+<li>使用方式：</li>
+</ul>
+<pre class="notranslate"><code class="notranslate">&lt;details&gt;
+    &lt;summary&gt;展开&lt;/summary&gt;
+    &lt;pre&gt;&lt;code&gt;
+    # 这里空一行，下面开始写代码
+    # 在这里写折叠的代码
+    # 最后这两行结束标签一定要顶格写且不能接在代码后面！！！
+    &lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+
+</code></pre>
+<ul>
+<li>效果：</li>
+</ul>
+<details>
+    <summary>展开</summary>
+    <pre class="notranslate"><code class="notranslate">
+    # 这里空一行，下面开始写代码
+    # 在这里写折叠的代码
+    # 最后这两行结束标签一定要顶格写且不能接在代码后面！！！
+    </code></pre>
+</details>
+<h2>五、文章插入html标签 👀</h2>
+<p>Github由于安全考虑，是不允许使用iframe等标签的，而且在issues插入的图片也会自动转换为github的地址。<br>
+为了文章的多样性，在Gmeek的v2.19版本中添加了支持html标签的功能。</p>
+<p>使用方式：<br>
+在需要添加html标签的位置使用code方式，并且后面紧跟着Gmeek-html，然后才是html标签。</p>
+<ol>
+<li>图片</li>
+</ol>
+<p><img src="https://picsum.photos/400"></p>
+<ol>
+<li>内嵌框架iframe-网站</li>
+</ol>
+<p><iframe style='border-radius:12px' src="https://music.meekdai.com/#35" width="100%" height="150px" frameborder="0" allowfullscreen="true"></iframe><br>
+3. 内嵌框架iframe-音乐</p>
+<p><iframe style='border-radius:12px' src='https://open.spotify.com/embed/track/0U3fV7K4WFfVRgLGEAKh3g?utm_source=generator' width='100%' height='100' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture' loading='lazy'></iframe><br>
+4. 内嵌框架iframe-视频</p>
+<p><iframe style='border-radius:12px' src="//player.bilibili.com/player.html?isOutside=true&aid=1604800941&bvid=BV1qm421M7Xs&cid=1557311907&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="200px"></iframe></p>
+<p>##　六、static文件夹使用 👀<br>
+使用方式：在自己的仓库根目录下新建一个文件夹，名称必须是static。<br>
+然后在static文件内上传一些自己的文件，比如avatar.svg文件。<br>
+通过手动全局生成一次成功后，你就可以通过 xxx.github.io/avatar.svg 访问了。</p>
+<div class="markdown-alert markdown-alert-caution"><p class="markdown-alert-title"><svg class="octicon octicon-stop mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M4.47.22A.749.749 0 0 1 5 0h6c.199 0 .389.079.53.22l4.25 4.25c.141.14.22.331.22.53v6a.749.749 0 0 1-.22.53l-4.25 4.25A.749.749 0 0 1 11 16H5a.749.749 0 0 1-.53-.22L.22 11.53A.749.749 0 0 1 0 11V5c0-.199.079-.389.22-.53Zm.84 1.28L1.5 5.31v5.38l3.81 3.81h5.38l3.81-3.81V5.31L10.69 1.5ZM8 4a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 4Zm0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Caution</p><p>需要特别注意区分script head allHead 等这些键的用途<br>
+在全局生成的时候，Actions会自动把static文件夹的所有内容拷贝到docs文件夹内。方便用户把docs当成一个目录部署到CF等其他服务器中。</p>
+</div>
+<p>##　七、插件 👀<br>
+为了使得Gmeek的功能更加的丰富，添加了插件功能，目前已经有几个插件可以使用。</p>
+<ol>
+<li>Vercount浏览计数GmeekVercount.js</li>
+</ol>
+<p>全站添加，只需要在config.json文件内添加配置</p>
+<pre class="notranslate"><code class="notranslate">"allHead":"&lt;script src='https://blog.meekdai.com/Gmeek/plugins/GmeekVercount.js'&gt;&lt;/script&gt;",
+</code></pre>
+<p>单个文章页添加，只需要在文章最后一行添加如下</p>
+<pre class="notranslate"><code class="notranslate">&lt;!-- ##{"script":"&lt;script src='https://blog.meekdai.com/Gmeek/plugins/GmeekVercount.js'&gt;&lt;/script&gt;"}## --&gt;
+</code></pre>
+<ol start="2">
+<li>TOC目录GmeekTOC.js</li>
+</ol>
+<p>全站添加，只需要在config.json文件内添加配置</p>
+<pre class="notranslate"><code class="notranslate">"script":"&lt;script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'&gt;&lt;/script&gt;",
+</code></pre>
+<p>单个文章页添加，只需要在文章最后一行添加如下</p>
+<pre class="notranslate"><code class="notranslate">&lt;!-- ##{"script":"&lt;script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'&gt;&lt;/script&gt;"}## --&gt;
+</code></pre>
+<ol start="3">
+<li>ArticleTOC目录articletoc.js<br>
+本插件由Tiengming编写，也是一个非常不错的TOC目录插件。配置方式和上面一样，只需要替换地址为如下地址即可。</li>
+</ol>
+<pre class="notranslate"><code class="notranslate">https://blog.meekdai.com/Gmeek/plugins/articletoc.js
+</code></pre>
+<ol start="4">
+<li>灯箱插件lightbox.js<br>
+本插件由Tiengming编写，可以放大浏览文章中的图片，适合一些图片较多的文章。</li>
+</ol>
+<p>全站添加，只需要在config.json文件内添加配置</p>
+<pre class="notranslate"><code class="notranslate">"script":"&lt;script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'&gt;&lt;/script&gt;",
+</code></pre>
+<p>单个文章页添加，只需要在文章最后一行添加如下</p>
+<pre class="notranslate"><code class="notranslate">&lt;!-- ##{"script":"&lt;script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'&gt;&lt;/script&gt;"}## --&gt;
+</code></pre>
+<ol start="5">
+<li>多插件使用</li>
+</ol>
+<p>全站添加，所有文章页使用TOC目录和灯箱插件，需要这样添加配置文件：</p>
+<pre class="notranslate"><code class="notranslate">"script":"&lt;script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'&gt;&lt;/script&gt;&lt;script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'&gt;&lt;/script&gt;",
+</code></pre>
+<p>单个文章页添加，单个文章使用TOC目录和灯箱插件，需要这样添加配置文件：</p>
+<pre class="notranslate"><code class="notranslate">&lt;!-- ##{"script":"&lt;script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'&gt;&lt;/script&gt;&lt;script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'&gt;&lt;/script&gt;"}## --&gt;
+</code></pre>
+<div class="markdown-alert markdown-alert-caution"><p class="markdown-alert-title"><svg class="octicon octicon-stop mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M4.47.22A.749.749 0 0 1 5 0h6c.199 0 .389.079.53.22l4.25 4.25c.141.14.22.331.22.53v6a.749.749 0 0 1-.22.53l-4.25 4.25A.749.749 0 0 1 11 16H5a.749.749 0 0 1-.53-.22L.22 11.53A.749.749 0 0 1 0 11V5c0-.199.079-.389.22-.53Zm.84 1.28L1.5 5.31v5.38l3.81 3.81h5.38l3.81-3.81V5.31L10.69 1.5ZM8 4a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 4Zm0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Caution</p><p>需要特别注意区分script head allHead 等这些键的用途</p>
+</div>
+<ul>
+<li>单篇文章自定义参数，自定义单篇文章页面的style和script</li>
+</ul>
+<pre class="notranslate"><code class="notranslate">&lt;!-- ##{"style":"&lt;style&gt;#postBody{font-size:20px}&lt;/style&gt;"}## --&gt;
+&lt;!-- ##{"script":"&lt;script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'&gt;&lt;/script&gt;"}## --&gt;
+
+</code></pre>
+<ul>
+<li>单篇文章多种自定义参数，可同时一起添加多种自定义参数：</li>
+</ul>
+<pre class="notranslate"><code class="notranslate">&lt;!-- ##{"script":"&lt;script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'&gt;&lt;/script&gt;","style":"&lt;style&gt;#postBody{font-size:20px}&lt;/style&gt;","timestamp":1490764800}## --&gt;
+
+</code></pre>
+<ul>
+<li>全局文章自定义参数，添加全局文章页面的style和script，在config.json文件中添加</li>
+</ul>
+<pre class="notranslate"><code class="notranslate">"style":"&lt;style&gt;#postBody{font-size:20px}&lt;/style&gt;",
+"script":"&lt;script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'&gt;&lt;/script&gt;",
+
+</code></pre>
+<p>##　八、其他设置 👀</p>
+<ol>
+<li>导入以前的文章<br>
+如需修改发布时间，可以在文章最后一行添加如下代码。里面的时间是采用时间戳的形式，可以用如下时间形式转换网站转换。</li>
+</ol>
+<pre class="notranslate"><code class="notranslate">&lt;!-- ##{"timestamp":1490764800}## --&gt;
+&lt;!-- ##{"script":"&lt;script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'&gt;&lt;/script&gt;","style":"&lt;style&gt;#postBody{font-size:20px}&lt;/style&gt;","timestamp":1490764800}## --&gt;
+
+</code></pre>
+<ol start="2">
+<li>
+<p>置顶博客文章<br>
+只需要Pin issue后，手动全局生成一次即可。</p>
+</li>
+<li>
+<p>删除文章<br>
+只需要Close issue或者Delete issue后，再手动全局生成一次即可。</p>
+</li>
+</ol></div>
+<div style="font-size:small;margin-top:8px;float:right;">❤️ 转载文章请注明出处，谢谢！❤️</div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://home.worhllo.us.kg">Watch Your Back's Blog</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if("11/11/2024"!=""){
+    var startSite=new Date("11/11/2024");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z', 'copy': 'M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z', 'check': 'M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z'};
+var utterancesLoad=0;
+
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","worhllo/myblog");
+    script.setAttribute("issue-term","title");
+    
+    script.setAttribute("theme","github-dark");
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const createClipboardHTML = (codeContent, additionalClasses = '') => `
+        <pre class="notranslate"><code class="notranslate">${codeContent}</code></pre>
+        <div class="clipboard-container position-absolute right-0 top-0 ${additionalClasses}">
+            <clipboard-copy class="ClipboardButton btn m-2 p-0" role="button" style="display: inherit;">
+                <svg height="16" width="16" class="octicon octicon-copy m-2"><path d="${IconList["copy"]}"></path></svg>
+                <svg height="16" width="16" class="octicon octicon-check color-fg-success m-2 d-none"><path d="${IconList["check"]}"></path></svg>
+            </clipboard-copy>
+            <div class="copy-feedback">Copied!</div>
+        </div>
+    `;
+
+    const handleCodeElements = (selector = '') => {
+        document.querySelectorAll(selector).forEach(codeElement => {
+            const codeContent = codeElement.innerHTML;
+            const newStructure = document.createElement('div');
+            newStructure.className = 'snippet-clipboard-content position-relative overflow-auto';
+            newStructure.innerHTML = createClipboardHTML(codeContent);
+
+            const parentElement = codeElement.parentElement;
+            if (selector.includes('highlight')) {
+                parentElement.insertBefore(newStructure, codeElement.nextSibling);
+                parentElement.removeChild(codeElement);
+            } else {
+                parentElement.parentElement.replaceChild(newStructure, parentElement);
+            }
+        });
+    };
+
+    handleCodeElements('pre.notranslate > code.notranslate');
+    handleCodeElements('div.highlight > pre.notranslate');
+
+    let currentFeedback = null;
+    document.querySelectorAll('clipboard-copy').forEach(copyButton => {
+        copyButton.addEventListener('click', () => {
+            const codeContent = copyButton.closest('.snippet-clipboard-content').innerText;
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = codeContent;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempTextArea);
+
+            const copyIcon = copyButton.querySelector('.octicon-copy');
+            const checkIcon = copyButton.querySelector('.octicon-check');
+            const copyFeedback = copyButton.nextElementSibling;
+
+            if (currentFeedback && currentFeedback !== copyFeedback) {currentFeedback.style.display = 'none';}
+            currentFeedback = copyFeedback;
+
+            copyIcon.classList.add('d-none');
+            checkIcon.classList.remove('d-none');
+            copyFeedback.style.display = 'block';
+            copyButton.style.borderColor = 'var(--color-success-fg)';
+
+            setTimeout(() => {
+                copyIcon.classList.remove('d-none');
+                checkIcon.classList.add('d-none');
+                copyFeedback.style.display = 'none';
+                copyButton.style.borderColor = '';
+            }, 2000);
+        });
+    });
+});
+
+</script>
+<script src='https://home.worhllo.us.kg/plugins/lightbox.js'></script><script src='https://home.worhllo.us.kg/plugins/articletoc.js'></script><script src='https://home.worhllo.us.kg/plugins/backtop.js'></script><script>document.querySelectorAll('a').forEach(anchor => {const img = anchor.querySelector('img');if (img && img.hasAttribute('data-canonical-src')) {const canonicalSrc = img.getAttribute('data-canonical-src');anchor.setAttribute('href', canonicalSrc);img.setAttribute('src', canonicalSrc);img.removeAttribute('data-canonical-src');}});</script>
+
+</html>
