@@ -30,7 +30,7 @@
 亮主题：github-light boxy-light preferred-color-scheme
 暗主题：github-dark github-dark-orange icy-dark dark-blue photon-dark gruvbox-dark
 
-##　二、右上角的按钮配置 👀
+## 二、右上角的按钮配置 👀
 在首页上部的右侧有一些按钮，配置方式如下：
 
 ### 2.1站内链接
@@ -150,7 +150,7 @@ Github由于安全考虑，是不允许使用iframe等标签的，而且在issue
 `Gmeek-html<iframe style='border-radius:12px' src="//player.bilibili.com/player.html?isOutside=true&aid=1604800941&bvid=BV1qm421M7Xs&cid=1557311907&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="200px"></iframe>`
 
 
-##　六、static文件夹使用 👀
+## 六、static文件夹使用 👀
 使用方式：在自己的仓库根目录下新建一个文件夹，名称必须是static。
 然后在static文件内上传一些自己的文件，比如avatar.svg文件。
 通过手动全局生成一次成功后，你就可以通过 xxx.github.io/avatar.svg 访问了。
@@ -159,7 +159,7 @@ Github由于安全考虑，是不允许使用iframe等标签的，而且在issue
 > 需要特别注意区分script head allHead 等这些键的用途
 在全局生成的时候，Actions会自动把static文件夹的所有内容拷贝到docs文件夹内。方便用户把docs当成一个目录部署到CF等其他服务器中。
 
-##　七、插件 👀
+## 七、插件 👀
 为了使得Gmeek的功能更加的丰富，添加了插件功能，目前已经有几个插件可以使用。
 
 1. Vercount浏览计数GmeekVercount.js
@@ -239,7 +239,7 @@ https://blog.meekdai.com/Gmeek/plugins/articletoc.js
 "script":"<script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'></script>",
 
 ```
-##　八、其他设置 👀
+## 八、其他设置 👀
 1. 导入以前的文章
 如需修改发布时间，可以在文章最后一行添加如下代码。里面的时间是采用时间戳的形式，可以用如下时间形式转换网站转换。
 
@@ -253,6 +253,6 @@ https://blog.meekdai.com/Gmeek/plugins/articletoc.js
 
 3. 删除文章
 只需要Close issue或者Delete issue后，再手动全局生成一次即可。
-##　九、参考文章 👀
+## 九、参考文章 👀
 https://www.grapehut.us.kg/post/3.html
 
